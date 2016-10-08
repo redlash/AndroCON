@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://pervasive.semanticweb.org/ont/2004/06/space#"
+     xml:base="http://pervasive.semanticweb.org/ont/2004/06/space"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:e_response_buildings="http://e-response.org/ontology/2006/20060815/e_response_buildings#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:geom="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#"
+     xmlns:pol="http://pervasive.semanticweb.org/ont/2004/06/policy#"
+     xmlns:tme="http://pervasive.semanticweb.org/ont/2004/01/time#"
+     xmlns:space="http://pervasive.semanticweb.org/ont/2004/06/space#"
+     xmlns:Location="http://www.cenitmio.es/ontologies/Location.owl#">
+    <owl:Ontology rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space">
+        <owl:versionInfo xml:lang="es">SOUPA Space Ontology  adaptada a la red de ontologías mIO!</owl:versionInfo>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <rdfs:comment>cvs:$Revision: 1.3 $, $Date: 2004/03/07 17:33:18 $</rdfs:comment>
+        <rdfs:comment>SOUPA Space Ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#controlledBy -->
+
+    <owl:ObjectProperty rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#controlledBy">
+        <owl:inverseOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#controls"/>
+        <rdfs:label>controlledBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#controls -->
+
+    <owl:ObjectProperty rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#controls">
+        <rdfs:domain rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeopoliticalEntity"/>
+        <rdfs:range rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+        <rdfs:label>controls</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#hasCoordinates -->
+
+    <owl:ObjectProperty rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#hasCoordinates">
+        <rdfs:domain rdf:resource="http://www.cenitmio.es/ontologies/Location.owl#NAryRelationHasLocation"/>
+        <rdfs:range rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#LocationCoordinates"/>
+        <rdfs:label>hasCoordinates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#spatiallySubsumedBy -->
+
+    <owl:ObjectProperty rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#spatiallySubsumedBy">
+        <owl:inverseOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#spatiallySubsumes"/>
+        <rdfs:label>spatiallySubsumedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#spatiallySubsumes -->
+
+    <owl:ObjectProperty rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#spatiallySubsumes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+        <rdfs:range rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+        <rdfs:label>spatiallySubsumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cenitmio.es/ontologies/Location.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.cenitmio.es/ontologies/Location.owl#hasLocation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#name -->
+
+    <owl:DatatypeProperty rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#name">
+        <rdfs:domain rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#officialName -->
+
+    <owl:DatatypeProperty rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#officialName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeopoliticalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>officialName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://e-response.org/ontology/2006/20060815/e_response_buildings#Building -->
+
+    <owl:Class rdf:about="http://e-response.org/ontology/2006/20060815/e_response_buildings#Building">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#FixedStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#AreaUnit -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#AreaUnit">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#AreaValueDescription -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#AreaValueDescription">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#Direction -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#Direction">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#Distance -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#Distance">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#DistanceUnit -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#DistanceUnit">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#DistanceValueDescription -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#DistanceValueDescription">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#LocationCoordinates -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#LocationCoordinates">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#SurfaceArea -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/geo-measurement#SurfaceArea">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#FixedStructure -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#FixedStructure">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+        <owl:disjointWith rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalRegion"/>
+        <owl:disjointWith rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#SpaceInAFixedStructure"/>
+        <rdfs:label>FixedStructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalRegion -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalRegion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#LandBasedRegion"/>
+                    <rdf:Description rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#WaterBasedRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+        <owl:disjointWith rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#SpaceInAFixedStructure"/>
+        <rdfs:label>GeographicalRegion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#FixedStructure"/>
+                    <rdf:Description rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalRegion"/>
+                    <rdf:Description rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#SpaceInAFixedStructure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#SpatialThing"/>
+        <owl:disjointWith rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#MovableSpatialThing"/>
+        <rdfs:label>GeographicalSpace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#GeopoliticalEntity -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#GeopoliticalEntity">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#LandBasedRegion -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#LandBasedRegion">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalRegion"/>
+        <owl:disjointWith rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#WaterBasedRegion"/>
+        <rdfs:label>LandBasedRegion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#MovableSpatialThing -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#MovableSpatialThing">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#Space -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#SpaceInAFixedStructure -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#SpaceInAFixedStructure">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+        <rdfs:label>SpaceInAFixedStructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#SpatialThing -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#SpatialThing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalSpace"/>
+                    <rdf:Description rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#MovableSpatialThing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cenitmio.es/ontologies/Location.owl#hasLocation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>SpatialThing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://pervasive.semanticweb.org/ont/2004/06/space#WaterBasedRegion -->
+
+    <owl:Class rdf:about="http://pervasive.semanticweb.org/ont/2004/06/space#WaterBasedRegion">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#GeographicalRegion"/>
+        <rdfs:label>WaterBasedRegion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cenitmio.es/ontologies/Location.owl#NAryRelationHasLocation -->
+
+    <owl:Class rdf:about="http://www.cenitmio.es/ontologies/Location.owl#NAryRelationHasLocation">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

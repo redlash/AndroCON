@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#"
+     xml:base="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:university="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#studies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#studies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lectureer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#first_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#last_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#staffID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#staffID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lectureer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#studentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#studentID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CSModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CSModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lectureer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lectureer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#MathModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#MathModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Module"/>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CS101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CS101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CS103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CS103">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lecturer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lectureer"/>
+        <teaches rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CS103"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roopak</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sinha</last_name>
+        <staffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234</staffID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lecturer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lectureer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#M201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#M201">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#M204 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#M204">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student"/>
+        <studies rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CS101"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leon</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang</last_name>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2234</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#CSModule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Lectureer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#MathModule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/em9736/ontologies/2016/8/university.owl#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

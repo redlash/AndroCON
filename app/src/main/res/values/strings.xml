@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroCON</string>
+    <string name="information">Press START button to start web server.</string>
+    <string name="startserver">Start</string>
+    <string name="testjena">Test Jena</string>
+    <string name="createtdb">Create TDB</string>
+    <string name="insertcontext">Insert Context</string>
+    <string name="querycontext">Query Context</string>
+    <string name="deletecontext">Delete Context</string>
+</resources>

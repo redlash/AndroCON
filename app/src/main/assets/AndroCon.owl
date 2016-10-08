@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://e-response.org/ontology/2006/20060815/e_response_buildings#"
+     xml:base="http://e-response.org/ontology/2006/20060815/e_response_buildings"
+     xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:e_response_buildings="http://e-response.org/ontology/2006/20060815/e_response_buildings#"
+     xmlns:ip="http://individual.utoronto.ca/hesham/IP.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oGalen="http://www.opengalen.org/open/crm/crm-anatomy.owl#"
+     xmlns:midLevel="http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://localhost/toplevel/androcon.owl">
+        <owl:imports rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space"/>
+        <owl:imports rdf:resource="http://www.cenitmio.es/ontologies/context_Environment.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+        <owl:imports rdf:resource="http://e-response.org/ontology/2006/20060815/e_response_buildings"/>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This ontology will be used in the e-Response scenario for the CROSI Mapping System (CMS) to align input concepts to designated concepts related to the event in question.</rdfs:comment>
+        <rdfs:comment xml:lang="en">15 August 2006: created by Yannis, a fabricated ontology for building defects, manufacturing materials, building types and any other building related concepts</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#hasEnvironmentalCondition -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/toplevel/androcon.owl#hasEnvironmentalCondition">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.cenitmio.es/ontologies/context_Environment.owl#EnvironmentalCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#hasHumidity -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/toplevel/androcon.owl#hasHumidity">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/toplevel/androcon.owl#hasEnvironmentalCondition"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.cenitmio.es/ontologies/context_Environment.owl#Humidity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#hasLighting -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/toplevel/androcon.owl#hasLighting">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/toplevel/androcon.owl#hasEnvironmentalCondition"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.cenitmio.es/ontologies/context_Environment.owl#Lighting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#hasNoise -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/toplevel/androcon.owl#hasNoise">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/toplevel/androcon.owl#hasEnvironmentalCondition"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.cenitmio.es/ontologies/context_Environment.owl#Noise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#hasPosture -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/toplevel/androcon.owl#hasPosture">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://localhost/toplevel/androcon.owl#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#hasPressure -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/toplevel/androcon.owl#hasPressure">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/toplevel/androcon.owl#hasEnvironmentalCondition"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.cenitmio.es/ontologies/context_Environment.owl#Pressure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#hasTemperature -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/toplevel/androcon.owl#hasTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/toplevel/androcon.owl#hasEnvironmentalCondition"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.cenitmio.es/ontologies/context_Environment.owl#Temperature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cenitmio.es/ontologies/Location.owl#hasLocation -->
+
+    <rdf:Description rdf:about="http://www.cenitmio.es/ontologies/Location.owl#hasLocation">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.cenitmio.es/ontologies/context_Environment.owl#timestamp -->
+
+    <rdf:Description rdf:about="http://www.cenitmio.es/ontologies/context_Environment.owl#timestamp">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressArea -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressArea">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressCity -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressCity">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressCountry">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressFloor -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressFloor">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressLetter -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressLetter">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressName -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressName">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressNumber">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressPostalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressPostalCode">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressStair -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressStair">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#addressStreet -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/toplevel/androcon.owl#addressStreet">
+        <rdfs:domain rdf:resource="http://localhost/toplevel/androcon.owl#Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/family_name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/family_name">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Activity -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Address -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Address">
+        <rdfs:subClassOf rdf:resource="http://pervasive.semanticweb.org/ont/2004/06/space#Space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Apartment -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Apartment">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ApartmentBuilding"/>
+        <rdfs:comment xml:lang="en">a relatively self-contained housing unit in a building.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#ApartmentBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#ApartmentBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">a multi-unit dwelling made up of several (generally four or more) apartments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#BoardingHouse -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#BoardingHouse">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A boarding house is a house (often a family home) in which holiday-makers or lodgers rent one or more rooms for one or more nights, and sometimes for extended periods of weeks, months and years</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Building -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Building"/>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Bungalow -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Bungalow">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A type of single story house.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Cafe -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Cafe">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A coffeehouse, coffee shop, or cafe  shares some of the characteristics of a bar, and some of the characteristics of a restaurant. As the name suggests, coffeehouses focus on providing coffee and tea as well as light snacks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Caravan -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Caravan">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A caravan is a small trailer in which people can live and travel simultaneously.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Church -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Church">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ReligiousBuilding"/>
+        <rdfs:comment xml:lang="en">A building used in Christian worship.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#College -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#College">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#EducationBuilding"/>
+        <rdfs:comment xml:lang="en">An educational institution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Cottage -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Cottage">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A cottage is a dwelling, typically in a non-urban location (although there are cottage-style dwellings in cities).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#DailyActivity -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#DailyActivity">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Depot -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Depot">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#StorageBuilding"/>
+        <rdfs:comment xml:lang="en">A depot is usually a centralized store or operating base for logistical use by commercial or governmental bodies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Detached -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Detached">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A free-standing residential building, generally found in less dense urban areas, the suburbs of cities, the exurban region, and rural areas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Dwelling -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Dwelling">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#EducationBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#EducationBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Factory -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Factory">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#IndustrialBuilding"/>
+        <rdfs:comment xml:lang="en">A factory or manufacturing plant is a large industrial building where workers manufacture goods or supervise machines processing one product into another.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Farm -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Farm">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A farm is the basic unit in agriculture. It is a section of land devoted to the production and management of food, either produce or livestock.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Farmhouse -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Farmhouse">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A farmhouse is a type of building or house which serves a residential purpose in a rural or agricultural setting. Most often, the surrounding environment will be a farm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Garage -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Garage">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#StorageBuilding"/>
+        <rdfs:comment xml:lang="en">A building or part of a home either designed or used for storing a vehicle or vehicles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Hospital -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Hospital">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">An institution for health care provided by physicians, surgeons, nurses, and other professionals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Hostel -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Hostel">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">Provide short-term accommodation to travellers or backpackers, particularly encouraging outdoor activities and cultural exchange for the young.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Hotel -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Hotel">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <owl:disjointWith rdf:resource="http://localhost/toplevel/androcon.owl#Motel"/>
+        <rdfs:comment xml:lang="en">An establishment that provides paid lodging, usually on a short-term basis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#House -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#House">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#IndustrialBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#IndustrialBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Liedown -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Liedown">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Maisonette -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Maisonette">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Apartment"/>
+        <rdfs:comment xml:lang="en">an apartment / flat on two levels with internal stairs, or which has its own entrance at street level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Mews -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Mews">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">British term referring to a certain type of stabling with living quarters. The term is both singular (&quot;a mews house&quot;) and plural, and is used primarily in London and in some parts of Canada.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Motel -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Motel">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">The word motel (from MOtor hoTEL) referred initially to a single building of connected rooms whose doors face a parking lot and/or common area or a series of small cabins with common parking. Their creation was driven by increased driving distances on the United States highway system that allowed easy cross-country travel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Movement -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Movement">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#MultiStory -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#MultiStory">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Building"/>
+        <rdfs:comment xml:lang="en">a building with more than one story (floor)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#NonResidentialBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#NonResidentialBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Building"/>
+        <owl:disjointWith rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">a building which is not used as a residence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#NursingHome -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#NursingHome">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A place of residence for people who require constant nursing care and have significant Activity of Daily Living (ADL) deficiencies. Residents include the elderly and younger adults with physical disabilities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#OfficeBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#OfficeBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">An office building  is a form of commercial building which contains spaces mainly designed to be used for offices. The primary purpose of an office building is to provide a workplace and working environment primarily for administrative and managerial workers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Penthouse -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Penthouse">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">the top floor of a multi-story building</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Posture -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Posture">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#PowerPlant -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#PowerPlant">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#IndustrialBuilding"/>
+        <rdfs:comment xml:lang="en">A facility for the generation of electric power.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Prefabricated -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Prefabricated">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">Houses built in modules (modular homes) or transportable sections (manufactured homes).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Refinery -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Refinery">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#IndustrialBuilding"/>
+        <rdfs:comment xml:lang="en">Is composed of a group of chemical engineering unit processes and unit operations used for refining certain materials or converting raw material into products of value.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#ReligiousBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#ReligiousBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#ResidentialBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#ResidentialBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Building"/>
+        <rdfs:comment xml:lang="en">a buidling which is constructed for residential occupancy. Its main purpose is to provide dwelling for one or more households</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Restaurant -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">An establishment that serves prepared food and beverages to be consumed on the premises.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Run -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Run">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#School -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#School">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#EducationBuilding"/>
+        <rdfs:comment xml:lang="en">A place designated for education in the form of group learning among students, teachers, and staff.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Semi-detached -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Semi-detached">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">Semi-detached housing consists of pairs of houses built side by side as units sharing a party wall and usually in such a way that each house&apos;s layout is a mirror image of its twin.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Shed -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Shed">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#StorageBuilding"/>
+        <rdfs:comment xml:lang="en">A simple, single-story structure in a back garden or on an allotment that is used for storage, hobbies or as a workshop.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Shop -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Shop">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A mercantile establishment for the retail sale of goods or services</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Sit -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Sit">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Sport -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Sport">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Squat -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Squat">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Still -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Still">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Posture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#StorageBuilding -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#StorageBuilding">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A building or collections of buildings, designed to hold large objects, or a great many objects of a particular type.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Studio -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Studio">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Apartment"/>
+        <rdfs:comment xml:lang="en">A self-contained unit with one main room, one bathroom, and some closet space. There is no distinct bedroom in a studio: sleeping, cooking, dining, living is all done in the main room.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Tavern -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Tavern">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#NonResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">A tavern is, loosely, a place of business where people gather to drink alcoholic beverages and, more than likely, also be served food, though not licenced to put up guests.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Terraced -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Terraced">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#ResidentialBuilding"/>
+        <rdfs:comment xml:lang="en">Is a style of housing where a row of identical or mirror-image houses share side walls. The first and last of these houses is called an end terrace.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Tilt -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Tilt">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Posture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Time -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Time"/>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#University -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#University">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#EducationBuilding"/>
+        <rdfs:comment xml:lang="en">An institution of higher education and research, which grants academic degrees at all levels (bachelor, master, and doctorate) in a variety of subjects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#User -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#User">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Walk -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Walk">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#Warehouse -->
+
+    <owl:Class rdf:about="http://localhost/toplevel/androcon.owl#Warehouse">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#StorageBuilding"/>
+        <rdfs:comment xml:lang="en">A commercial building for storage of goods.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescription -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DateTimeDescription">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Time"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Time"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#DurationDescription">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Time"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Time"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalUnit -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Time"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/zone#TimeZone -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/zone#TimeZone">
+        <rdfs:subClassOf rdf:resource="http://localhost/toplevel/androcon.owl#Time"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#AUT -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/toplevel/androcon.owl#AUT">
+        <rdf:type rdf:resource="http://localhost/toplevel/androcon.owl#University"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#UoA -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/toplevel/androcon.owl#UoA">
+        <rdf:type rdf:resource="http://localhost/toplevel/androcon.owl#University"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#User1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/toplevel/androcon.owl#User1">
+        <rdf:type rdf:resource="http://localhost/toplevel/androcon.owl#User"/>
+        <foaf:family_name>Wang</foaf:family_name>
+        <foaf:firstName>Chris</foaf:firstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/toplevel/androcon.owl#WT -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/toplevel/androcon.owl#WT">
+        <rdf:type rdf:resource="http://localhost/toplevel/androcon.owl#OfficeBuilding"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
